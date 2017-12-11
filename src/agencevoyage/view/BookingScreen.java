@@ -113,7 +113,7 @@ public class BookingScreen extends javax.swing.JPanel {
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
         int booked_place = Integer.parseInt((String) nb_place_box.getSelectedItem());
         int new_number_place = journey.getNumberPlace() - booked_place;
-        if(new_number_place <= 0){
+        if(new_number_place >= 0){
             journey.setNumberPlace(new_number_place);
             refreshComboBox();
             currentframe.getContentPane().removeAll();

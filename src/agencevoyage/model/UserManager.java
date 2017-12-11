@@ -22,7 +22,7 @@ public class UserManager {
                 "admin",
                 "admin",
                 "clemalex20@gmail.com",
-                3630
+                80030250
         );
         user_list.add(admin);
     }
@@ -43,7 +43,7 @@ public class UserManager {
     }
     
     public void retrieveUser(){
-        String file_name = "src\\agencevoyage\\assets\\user_list.ser";
+        String file_name = "user_list.ser";
         Serializer serializer = new Serializer();
         LinkedList<User> tmp_list;
         tmp_list = (LinkedList<User>) serializer.deSerialize(file_name);
@@ -57,7 +57,7 @@ public class UserManager {
     }
     
     public void saveUser(){
-        String file_name = "src\\agencevoyage\\assets\\user_list.ser";
+        String file_name = "user_list.ser";
         Serializer serializer = new Serializer();
         serializer.serialize(user_list, file_name);
     }

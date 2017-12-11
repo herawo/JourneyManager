@@ -42,10 +42,10 @@ public class LogginScreen extends javax.swing.JPanel {
         identifier_lbl = new javax.swing.JLabel();
         password_lbl = new javax.swing.JLabel();
         identifier = new javax.swing.JTextField();
-        password = new javax.swing.JTextField();
         submit = new javax.swing.JButton();
         subscribe = new javax.swing.JButton();
         log_message = new javax.swing.JLabel();
+        password = new javax.swing.JPasswordField();
 
         screen_name_lbl.setText("Connexion");
 
@@ -56,12 +56,6 @@ public class LogginScreen extends javax.swing.JPanel {
         identifier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 identifierActionPerformed(evt);
-            }
-        });
-
-        password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
             }
         });
 
@@ -101,16 +95,16 @@ public class LogginScreen extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(subscribe)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                                 .addComponent(submit))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(identifier_lbl)
                                     .addComponent(password_lbl))
                                 .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(identifier, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(identifier, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(password)))
                             .addComponent(log_message))))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
@@ -129,21 +123,17 @@ public class LogginScreen extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(password_lbl)
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submit)
                     .addComponent(subscribe))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void identifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identifierActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_identifierActionPerformed
-
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordActionPerformed
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
         if(logging.log(identifier.getText(), password.getText())){
@@ -178,7 +168,7 @@ public class LogginScreen extends javax.swing.JPanel {
     private javax.swing.JTextField identifier;
     private javax.swing.JLabel identifier_lbl;
     private javax.swing.JLabel log_message;
-    private javax.swing.JTextField password;
+    private javax.swing.JPasswordField password;
     private javax.swing.JLabel password_lbl;
     private javax.swing.JLabel screen_name_lbl;
     private javax.swing.JButton submit;

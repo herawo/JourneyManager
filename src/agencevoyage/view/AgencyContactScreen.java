@@ -36,26 +36,20 @@ public class AgencyContactScreen extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pseudo_lbl = new javax.swing.JLabel();
         email_lbl = new javax.swing.JLabel();
         phone_lbl = new javax.swing.JLabel();
-        pseudo = new javax.swing.JLabel();
         email = new javax.swing.JLabel();
         phone = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         previous = new javax.swing.JButton();
 
-        pseudo_lbl.setText("Pseudo");
-
         email_lbl.setText("Email");
 
         phone_lbl.setText("Téléphone");
 
-        pseudo.setText("nom");
+        email.setText("voyage-de-ouf@gmail.com");
 
-        email.setText("mail");
-
-        phone.setText("tel");
+        phone.setText("008 50 23 200");
 
         jLabel1.setText("Contact");
 
@@ -71,36 +65,29 @@ public class AgencyContactScreen extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(phone_lbl)
-                    .addComponent(email_lbl)
-                    .addComponent(pseudo_lbl))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(email)
-                    .addComponent(phone)
-                    .addComponent(pseudo))
-                .addGap(0, 142, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(80, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(previous)
                         .addGap(153, 153, 153))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(phone_lbl)
+                            .addComponent(email_lbl))
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(email)
+                            .addComponent(phone))
+                        .addGap(68, 68, 68))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(167, 167, 167))))
+                        .addGap(166, 166, 166))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(76, 76, 76)
                 .addComponent(jLabel1)
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pseudo_lbl)
-                    .addComponent(pseudo))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(email_lbl)
@@ -109,7 +96,7 @@ public class AgencyContactScreen extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(phone_lbl)
                     .addComponent(phone))
-                .addGap(18, 18, 18)
+                .addGap(42, 42, 42)
                 .addComponent(previous)
                 .addContainerGap(66, Short.MAX_VALUE))
         );
@@ -133,7 +120,5 @@ public class AgencyContactScreen extends javax.swing.JPanel {
     private javax.swing.JLabel phone;
     private javax.swing.JLabel phone_lbl;
     private javax.swing.JButton previous;
-    private javax.swing.JLabel pseudo;
-    private javax.swing.JLabel pseudo_lbl;
     // End of variables declaration//GEN-END:variables
 }

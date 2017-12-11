@@ -21,17 +21,17 @@ public class JourneyManager {
     }
     
     public void retrieveJourneyList(){
-        String file_name = "src\\agencevoyage\\assets\\journey_list.ser";
+        String file_name = "journey_list.ser";
         Serializer serializer = new Serializer();
         journey_list = (LinkedList<Journey>) serializer.deSerialize(file_name); 
     }
     
     public LinkedList<Journey> getJourneyList(){
-        return journey_list;   
+        return journey_list;
     }
 
     public void saveJourneyList(){
-        String file_name = "src\\agencevoyage\\assets\\journey_list.ser";
+        String file_name = "journey_list.ser";
         Serializer serializer = new Serializer();
         serializer.serialize(journey_list, file_name);
     }
