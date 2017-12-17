@@ -7,7 +7,6 @@ package agencevoyage.view;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import agencevoyage.model.Logging;
 import agencevoyage.model.Customer;
 import agencevoyage.model.User;
 import agencevoyage.model.UserManager;
@@ -18,7 +17,6 @@ import agencevoyage.model.UserManager;
  */
 public class SubscriptionScreen extends javax.swing.JPanel {
     
-    private Logging logging;
     private JPanel contentPane;
     private JFrame currentframe;
     
@@ -27,7 +25,6 @@ public class SubscriptionScreen extends javax.swing.JPanel {
      */
     public SubscriptionScreen(JPanel panel, JFrame frame) {
         currentframe = frame;
-        logging = new Logging();
         contentPane = panel;
         initComponents();
         already_exists_lbl.setVisible(false);

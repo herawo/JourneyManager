@@ -7,7 +7,6 @@ package agencevoyage.view;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import agencevoyage.model.Logging;
 import agencevoyage.model.UserManager;
 
 /**
@@ -15,7 +14,6 @@ import agencevoyage.model.UserManager;
  * @author UTILISATEUR
  */
 public class LogginScreen extends javax.swing.JPanel {
-    private Logging logging;
     private JPanel contentPane;
     private JFrame currentframe;
     /**
@@ -23,7 +21,6 @@ public class LogginScreen extends javax.swing.JPanel {
      */
     public LogginScreen(JPanel panel, JFrame frame) {
         currentframe = frame;
-        logging = new Logging();
         contentPane = panel;
         initComponents();
         log_message.setVisible(false);
@@ -136,7 +133,8 @@ public class LogginScreen extends javax.swing.JPanel {
     }//GEN-LAST:event_identifierActionPerformed
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-        if(logging.log(identifier.getText(), password.getText())){
+        String to_str_password = String.valueOf(password.getPassword());
+        if(UserManager.getInstance().logUser(identifier.getText(), to_str_password)){
             currentframe.getContentPane().removeAll();
             DisplayScreen displayer_screen = new DisplayScreen(
                     contentPane, 

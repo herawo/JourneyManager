@@ -69,4 +69,16 @@ public class UserManager {
     public User getCurrentUser(){
         return currentUser;
     }
+    
+    public boolean logUser(String identifier, String password){
+        for(User u : UserManager.getInstance().getUser()){
+            if(u.getIdentifier().equals(identifier)){
+                if(u.getPassword().equals(password)){
+                    UserManager.getInstance().setCurrentUser(u);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
